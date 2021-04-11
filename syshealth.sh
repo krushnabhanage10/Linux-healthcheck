@@ -1,6 +1,6 @@
 #! /bin/bash
-#Author : - Shashank Srivastava
-#Date : - 6 March, 2017
+#Author : - Krushna Bhanage
+#Date : - 11 March 2021
 
 #Checking if this script is being executed as ROOT. For maintaining proper directory structure, this script must be run from a root user.
 if [ $EUID != 0 ]
@@ -38,7 +38,7 @@ echo "<body>" >> $html
 echo "<fieldset>" >> $html
 echo "<center>" >> $html
 echo "<h2>Linux Server Report" >> $html
-echo "<h3><legend>Script authored by Shashank Srivastava</legend></h3>" >> $html
+echo "<h3><legend>Script authored by Krushna Bhanage</legend></h3>" >> $html
 echo "</center>" >> $html
 echo "</fieldset>" >> $html
 echo "<br>" >> $html
@@ -110,4 +110,4 @@ echo "</body>" >> $html
 echo "</html>" >> $html
 echo "Report has been generated in ${HOME}/health_reports with file-name = $html. Report has also been sent to $email_add."
 #Sending Email to the user
-cat $html | mail -s "`hostname` - Daily System Health Report" -a "MIME-Version: 1.0" -a "Content-Type: text/html" -a "From: Shashank Srivastava <root@shashank.com>" $email_add
+cat $html | mail -s "`hostname` - Daily System Health Report" -a "MIME-Version: 1.0" -a "Content-Type: text/html" -a "From: Krushna Bhanage <root@krushna.com>" $email_add
